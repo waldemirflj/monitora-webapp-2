@@ -1,5 +1,5 @@
 <div class="main">
-  <div class="container-fluid border">
+  <div class="container-fluid">
     <div class="container">
       <nav>
         <p>menu</p>
@@ -7,16 +7,22 @@
     </div>
   </div>
 
-  <main class="container-fluid border">
+  <main class="container-fluid">
     <div class="container">
-      <div *ngFor="let el of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; let i = index">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit maiores eum iusto et. Fugit enim asperiores nihil similique, eaque, provident temporibus corrupti totam, numquam nisi voluptas reprehenderit sequi natus?</p>
+      <div class="row">
+        <div class="col-2 rounded m-1 bg-48d0b0 d-flex flex-column justify-content-center pt-2 pb-2" *ngFor="let el of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; let i = index">
+          <b class="text-white mb-1">Pokemon</b>
+          <div class="d-flex flex-column">
+            <small class="mb-1 p-1 rounded bg-61e0c9 text-white">opção 1</small>
+            <small class="mb-1 p-1 rounded bg-61e0c9 text-white">opção 1</small>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 </div>
 
-<footer class="container-fluid border">
+<footer class="container-fluid">
   <div class="container">
     <p>rodape</p>
   </div>
