@@ -1,9 +1,21 @@
-.bg-48d0b0 {
-  background: #48d0b0 url('../assets/images/1.png') center right no-repeat;
-  background-size: 50%;
-}
+// .bg-48d0b0 {
+//   background: #48d0b0 url('../assets/images/1.png') center right no-repeat;
+//   background-size: 50%;
+// }
 
 .bg-61e0c9 {
   background: #61e0c9;
   width: fit-content;
+}
+
+
+.pokemon {
+  @for $i from 1 to 151 {
+    &.pokemon-#{$i} {
+      background: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/#{$i}.png') center right no-repeat;
+      background-size: 50%;
+    }
+  }
+
+  border: 1px solid #ccc;
 }

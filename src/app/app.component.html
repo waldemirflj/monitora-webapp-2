@@ -10,13 +10,21 @@
   <main class="container-fluid">
     <div class="container">
       <div class="row">
-        <div class="col-2 rounded m-1 bg-48d0b0 d-flex flex-column justify-content-center pt-2 pb-2" *ngFor="let el of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; let i = index">
-          <b class="text-white mb-1">Pokemon</b>
+
+        <!-- <div class="col-2 rounded m-1 bg-48d0b0 d-flex flex-column justify-content-center pt-2 pb-2" *ngFor="let pokemon of pokemons; let i = index" [ngStyle]="{'background': ''+ pokemon.color +' url('+ pokemon.image +') center right no-repeat', 'background-size': '50%'}">
+          <b class="text-white mb-1">{{ pokemon.name }}</b>
           <div class="d-flex flex-column">
-            <small class="mb-1 p-1 rounded bg-61e0c9 text-white">opção 1</small>
-            <small class="mb-1 p-1 rounded bg-61e0c9 text-white">opção 1</small>
+            <small class="mb-1 p-1 rounded bg-61e0c9 text-white" *ngFor="let type of pokemon.types; let i = index">{{ type }}</small>
+          </div>
+        </div> -->
+
+        <div class="col-2 rounded m-1 bg-48d0b0 d-flex flex-column justify-content-center pt-2 pb-2 pokemon" *ngFor="let pokemon of pokemons; let i = index" [ngStyle]="{'background-color': pokemon.color }" [ngClass]="'pokemon-' + pokemon.entry_number">
+          <b class="text-white mb-1">{{ pokemon.name }}</b>
+          <div class="d-flex flex-column">
+            <small class="mb-1 p-1 rounded bg-61e0c9 text-white" *ngFor="let type of pokemon.types; let i = index">{{ type }}</small>
           </div>
         </div>
+
       </div>
     </div>
   </main>
